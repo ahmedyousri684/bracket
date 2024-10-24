@@ -15,7 +15,7 @@ WORKDIR /app
 COPY . .
 COPY --from=deps /app/node_modules ./node_modules
 
-RUN NEXT_PUBLIC_API_BASE_URL=http://localhost:8400 \
+RUN NEXT_PUBLIC_API_BASE_URL=https://f9devweb11-decfbqatcbbyfxbn.uaenorth-01.azurewebsites.net \
     NEXT_PUBLIC_HCAPTCHA_SITE_KEY=10000000-ffff-ffff-ffff-000000000001 \
     yarn build
 
